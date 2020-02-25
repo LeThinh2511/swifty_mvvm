@@ -1,0 +1,26 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+class {{ module_info.name }}ViewController: BaseViewController {
+
+    var viewModel: I{{ module_info.name }}ViewModal!
+
+    // MARK: Life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.viewIsReady()
+    }
+}
+
+// MARK: {{module_info.name}}ViewInput 
+extension {{ module_info.name }}ViewController: I{{ module_info.name }}View {
+    func setupInitialState() {
+    }
+}

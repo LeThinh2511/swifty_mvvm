@@ -1,5 +1,5 @@
 # Template information section
-name: "swift_mvvm"
+name: "swifty_mvvm"
 summary: "MVVM module template with UIViewController playing as a View"
 author: "ThinhLe"
 version: "0.1.0"

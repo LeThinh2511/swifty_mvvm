@@ -13,6 +13,12 @@ code_files:
 # ViewModel layer
 - {name: ViewModel.swift, path: Code/viewmodel.swift.liquid}
 
+# Contracts
+- {name: Contracts.swift, path: Code/contracts.swift.liquid}
+
+# Initializer
+- {name: Initializer.swift, path: Code/initializer.swift.liquid}
+
 # The declarations for test files
 test_files:
 # ViewController tests

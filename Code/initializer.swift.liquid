@@ -15,7 +15,7 @@ class {{ module_info.name }}ModuleInitializer {
     
     func initiate() -> {{ module_info.name }}ViewController {
         let view = {{ module_info.name }}ViewController()
-        let viewModel = {{ module_info.name }}ViewModal(view: view)
+        let viewModel = {{ module_info.name }}ViewModel(view: view)
         view.viewModel = viewModel
         return view
     }

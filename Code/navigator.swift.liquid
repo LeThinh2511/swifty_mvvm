@@ -8,20 +8,16 @@
 
 import UIKit
 
-extension {{ module_info.name }}Navigator {
-    enum Transition {
-    }
-}
-
 class {{ module_info.name }}Navigator {
     var viewController: {{ module_info.name }}ViewController
     
     init() {
         viewController = {{ module_info.name }}ViewController()
-        let viewModel = {{ module_info.name }}ViewModel(view: viewController)
-        viewController.viewModel.navigator = self
+        let viewModel = {{ module_info.name }}ViewModel(view: viewController, navigator: self)
+        viewController.viewModel = viewModel
     }
-    
-    func performTransition(transition: Transition) {
-    }
+}
+
+// MARK: I{{ module_info.name }}Navigator
+extension {{ module_info.name }}Navigator: I{{ module_info.name }}Navigator {
 }

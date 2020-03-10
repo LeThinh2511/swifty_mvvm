@@ -8,19 +8,20 @@
 
 import UIKit
 
-class {{ module_info.name }}ViewController: BaseViewController {
-
-    var viewModel: I{{ module_info.name }}ViewModel!
-
-    // MARK: Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        viewModel.viewIsReady()
+extension {{ module_info.name }}Navigator {
+    enum Trasition {
     }
 }
 
-// MARK: {{module_info.name}}ViewInput 
-extension {{ module_info.name }}ViewController: I{{ module_info.name }}View {
-    func setupInitialState() {
+class {{ module_info.name }}Navigator: INavigator {
+    var viewController: UIViewController
+    
+    init() {
+        viewController = {{ module_info.name }}ViewController()
+        let viewModel = {{ module_info.name }}ViewModel(view: viewController)
+        viewController.viewModel.navigator = self
+    }
+    
+    func performTransition(transition: Transition) {
     }
 }

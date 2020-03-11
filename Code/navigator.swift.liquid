@@ -9,12 +9,10 @@
 import UIKit
 
 class {{ module_info.name }}Navigator {
-    unowned var viewController: {{ module_info.name }}ViewController
+    unowned var view: {{ module_info.name }}ViewController
     
-    init() {
-        viewController = {{ module_info.name }}ViewController()
-        let viewModel = {{ module_info.name }}ViewModel(view: viewController, navigator: self)
-        viewController.viewModel = viewModel
+    init(view: {{ module_info.name }}ViewController) {
+        self.view = view
     }
 }
 

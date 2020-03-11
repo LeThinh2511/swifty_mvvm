@@ -6,18 +6,17 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class {{ module_info.name }}Navigator {
-    unowned var viewController: {{ module_info.name }}ViewController
+class {{ module_info.name }}Initializer {
+    private init() {}
     
-    init() {
-        viewController = {{ module_info.name }}ViewController()
-        let viewModel = {{ module_info.name }}ViewModel(view: viewController, navigator: self)
-        viewController.viewModel = viewModel
+    static func initiate() -> {{ module_info.name }}ViewController {
+        let view: {{ module_info.name }}ViewController = UIViewController.initiate(from: .)
+        let navigator = {{ module_info.name }}Navigator(view: view)
+        let viewModel = {{ module_info.name }}ViewModel(view: view, navigator: navigator)
+        view.viewModel = viewModel
+        return view
     }
-}
-
-// MARK: I{{ module_info.name }}Navigator
-extension {{ module_info.name }}Navigator: I{{ module_info.name }}Navigator {
 }

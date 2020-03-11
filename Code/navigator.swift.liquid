@@ -9,7 +9,7 @@
 import UIKit
 
 class {{ module_info.name }}Navigator {
-    var viewController: {{ module_info.name }}ViewController
+    unowned var viewController: {{ module_info.name }}ViewController
     
     init() {
         viewController = {{ module_info.name }}ViewController()

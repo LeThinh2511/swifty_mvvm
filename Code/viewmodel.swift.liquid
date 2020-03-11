@@ -8,7 +8,7 @@
 
 class {{ module_info.name }}ViewModel {
     private weak var view: I{{ module_info.name }}View?
-    private weak var navigator: I{{ module_info.name }}Navigator?
+    private var navigator: I{{ module_info.name }}Navigator?
 
     init(view: I{{ module_info.name }}View, navigator: I{{ module_info.name }}Navigator) {
         self.view = view

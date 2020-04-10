@@ -8,14 +8,5 @@
 
 import UIKit
 
-class {{ module_info.name }}Navigator {
-    unowned var view: {{ module_info.name }}ViewController
-    
-    init(view: {{ module_info.name }}ViewController) {
-        self.view = view
-    }
-}
-
-// MARK: I{{ module_info.name }}Navigator
-extension {{ module_info.name }}Navigator: I{{ module_info.name }}Navigator {
+class {{ module_info.name }}Navigator: BaseNavigator {
 }

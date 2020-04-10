@@ -7,18 +7,9 @@
 //
 
 class {{ module_info.name }}ViewModel {
-    private weak var view: I{{ module_info.name }}View?
-    private var navigator: I{{ module_info.name }}Navigator?
+    private var navigator: {{ module_info.name }}Navigator
 
-    init(view: I{{ module_info.name }}View, navigator: I{{ module_info.name }}Navigator) {
-        self.view = view
+    init(navigator: {{ module_info.name }}Navigator) {
         self.navigator = navigator
-    }
-}
-
-// MARK: I{{ module_info.name }}ViewModel
-extension {{ module_info.name }}ViewModel: I{{ module_info.name }}ViewModel {
-    func viewIsReady() {
-        view?.setupInitialState()
     }
 }

@@ -13,9 +13,6 @@ code_files:
 # ViewModel layer
 - {name: ViewModel.swift, path: Code/viewmodel.swift.liquid}
 
-# Contracts
-- {name: Contracts.swift, path: Code/contracts.swift.liquid}
-
 # Navigator
 - {name: Navigator.swift, path: Code/navigator.swift.liquid}
 
@@ -24,8 +21,3 @@ code_files:
 
 # The declarations for test files
 test_files:
-# ViewController tests
-- {name: ViewControllerTests.swift, path: Tests/view_tests.swift.liquid}
-
-# ViewModel tests
-- {name: ViewModelTests.swift, path: Tests/viewmodel_tests.swift.liquid}

@@ -10,17 +10,11 @@ import UIKit
 
 class {{ module_info.name }}ViewController: BaseViewController {
 
-    var viewModel: I{{ module_info.name }}ViewModel!
+    var viewModel: {{ module_info.name }}ViewModel!
 
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewIsReady()
-    }
-}
-
-// MARK: I{{module_info.name}}View
-extension {{ module_info.name }}ViewController: I{{ module_info.name }}View {
-    func setupInitialState() {
     }
 }

@@ -16,5 +16,10 @@ class {{ module_info.name }}ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewIsReady()
+        binding()
+    }
+    
+    // MARK: Private Function
+    func binding() {
     }
 }

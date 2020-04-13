@@ -13,9 +13,9 @@ class {{ module_info.name }}Initializer {
     private init() {}
     
     static func initiate() -> {{ module_info.name }}ViewController {
-        let view: {{ module_info.name }}ViewController = UIViewController.initiate(from: .)
+        let view = {{ module_info.name }}ViewController()
         let navigator = {{ module_info.name }}Navigator(view: view)
-        let viewModel = {{ module_info.name }}ViewModel(view: view, navigator: navigator)
+        let viewModel = {{ module_info.name }}ViewModel(navigator: navigator)
         view.viewModel = viewModel
         return view
     }
